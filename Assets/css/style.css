@@ -1,0 +1,567 @@
+ /* Global Styles */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #005a87;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+
+.img {
+    width: 300px;
+    height: 350px;
+}
+
+.hero {
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .carousel {
+    width: 100%;
+    height: 100%;
+}
+
+.hero .carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.hero .carousel-item {
+    width: 100%;
+    height: 100%;
+}
+
+.hero .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire slider */
+}
+
+.hero .carousel-caption {
+    background: rgba(244, 243, 243, 0.856);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.hero h5,p {
+    color: #111;
+}
+
+.hero .carousel-indicators{
+    color: white;
+}
+.card-text {
+    color: black;
+}
+
+
+/* Services */
+.services {
+    padding: 50px 20px;
+    text-align: center;
+    background: white;
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    font-size: 24px;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-in-out;
+    z-index: 1000;
+    animation: bounce 2s infinite, glow 1.5s infinite alternate;
+}
+
+/* Hover Effect */
+.whatsapp-float:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.1);
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Glow Effect */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #25D366;
+    }
+    100% {
+        box-shadow: 0 0 20px #25D366;
+    }
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding:10px;
+    background: #333;
+    color: white;
+}
+
+footer p {
+    color: #fff;
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh; /* Reduce height for smaller screens */
+    }
+
+    .hero .carousel-caption {
+        display: block !important;  /* Force display */
+        bottom: 10px;  /* Adjust position */
+        width: 90%;  /* Make it more readable */
+        font-size: 14px;  /* Reduce font size */
+        padding: 10px;
+    }
+
+    .hero h5 {
+        font-size: 16px;  /* Adjust heading */
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+
+    .img {
+        width: 80%; /* Make image more flexible */
+        max-width: 250px;
+    }
+
+    .who-we-are-row {
+        display: flex;
+        flex-direction: row; /* Ensures normal desktop layout */
+        align-items: center;
+    }
+    
+    
+}
+    
+
+
+/* Smaller screens (phones) */
+@media (max-width: 480px) {
+    .hero {
+        height: 50vh; /* Further reduce height */
+    }
+
+    .hero .carousel-caption {
+        font-size: 15px;
+        padding: 8px;
+        width: 95%;
+        left: 7px;
+    }
+    .btn-primary {
+        display: none;
+    }
+
+    .hero h5 {
+        font-size: 14px;
+    }
+
+    .hero p {
+        font-size: 10px;
+    }
+
+    .img {
+        width: 90%;
+        max-width: 200px;
+    }
+
+    .fw-bold, .text-muted {
+        text-align: center;
+    }
+
+    .who-we-are-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .who-we-are-title {
+        order: 1; /* Keep title first */
+    }
+
+    .who-we-are-content {
+        order: 2; /* Move paragraph below the title */
+    }
+
+    .global-trade {
+        order: 3; /* Move logo & text below description */
+    }
+
+    .who-we-are-details {
+        order: 4; /* Move badges & list at the bottom */
+    }
+
+    
+
+    }
+    
+    /* Keep the original layout for laptops and larger screens */
+    @media (min-width: 768px) { 
+        
+
+        .who-we-are-row {
+            display: flex;
+            flex-direction: row; /* Ensures no layout change */
+            align-items: center;
+        }
+    }
+
+    
+    
+
+
+
+/* about page  */
+#about-us {
+    border-bottom: 2px solid #333;
+  }
+  
+  .custom-icon {
+    color: black;
+    font-size: 400px; 
+    font-weight: 100; /* Lighter weight */
+    transform: scale(0.9);/* Adjust size if needed */
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #005a87;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        left: 0;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+/* About Page css  */
+
+/* Hero Section Styling */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 50px 0;
+    background: #f8f9fa;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-video {
+    max-width: 50%;
+    text-align: right;
+}
+
+.hero-video video {
+    width: 100%;
+    object-fit: cover;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    height: 400px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text, .hero-video {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+.mission-box, .vision-box {
+    background: white;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.mission-box:hover, .vision-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.icon-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.icon-box i {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+/* Product Page */
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+.category-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.category-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.category-card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.btn-view-more {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+.btn-view-more:hover {
+    background-color: #0056b3;
+}
+
+
+/* product  */
+ /* Flip Card Styles */
+ .flip-card {
+    width: 100%;
+    height: 250px;
+    perspective: 1000px; /* Enables 3D effect */
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.flip-card-front,
+.flip-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.flip-card-front {
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.flip-card-back {
+    background-color: #f8d57e;
+    transform: rotateY(180deg);
+}
+
+/* Add Flip Effect */
+.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* abou1 */
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Section Styling */
+.about-section {
+    padding: 50px 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Content Container */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    position: relative;
+}
+
+/* Logo Section */
+.logo {
+    margin-bottom: 20px;
+}
+
+.logo-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+}
+
+.logo-circle p {
+    margin: 0;
+    font-size: 14px;
+    color: black;
+}
+
+/* Text Content */
+.text-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.text-content .highlight {
+    background: linear-gradient(90deg, #FFD700 50%, #000 50%);
+    display: inline-block;
+    padding: 2px 8px;
+    font-weight: bold;
+}
+
+.text-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-top: 10px;
+}
+
+/* Image Section */
+.image-container {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.overlay-circle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    top: 20%;
+    right: 20%;
+    opacity: 0.8;
+}
+
+
+
+
+
+

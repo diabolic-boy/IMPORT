@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+
+    <style>
+      /* Hero Section */
+      .hero-section {
+        background: url("assets/img/ship1.webp") no-repeat center center/cover;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        position: relative;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .hero-title {
+        position: absolute;
+        bottom: 40%; /* Adjusted for better visibility */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 5vw;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        z-index: 2;
+      }
+
+      /* RESPONSIVE HERO SECTION */
+      @media (max-width: 1024px) {
+        .hero-title {
+          font-size: 4.5vw;
+          bottom: 12%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 6vw;
+          bottom: 10%;
+        }
+      }
+
+      @media (max-width: 480px) {
+       
+        .hero-title {
+          font-size: 10vw;
+          bottom: 40%;
+        }
+        .hero-section {
+          height: 30vh;
+        }
+
+        .text-section {
+          padding: 15px; /* Reduce padding for small screens */
+          font-size: 16px; /* Slightly smaller text for better readability */
+          line-height: 1.6; /* Adjust spacing for mobile readability */
+          max-width: 100%; /* Use full width on mobile */
+        }
+
+        .text-section p {
+          margin-bottom: 15px;
+          text-indent: 30px;
+          text-align: justify;
+          hyphens: auto;
+          text-align: left; /* Enables word breaking */
+        }
+
+        .service-card {
+          flex-direction: column-reverse; /* Ensures image stays on top */
+          text-align: center;
+          padding: 15px;
+        }
+
+        .service-image {
+          width: 100%; /* Make image full width */
+          margin-bottom: 15px;
+        }
+
+        .service-text {
+          width: 100%;
+          padding: 10px;
+          text-align: center;
+        }
+
+        .service-text h3 {
+          font-size: 20px;
+        }
+
+        .service-text p {
+          font-size: 14px;
+          line-height: 1.4;
+        }
+
+        .slider img {
+          width: 200px;
+        }
+      }
+
+      .text-section {
+        padding: 30px; /* More padding for better spacing */
+        text-align: left; /* Align text to the left */
+        font-size: 18px;
+        line-height: 1.8; /* Improved readability */
+        color: #333; /* Slightly softer black for better readability */
+        font-weight: 400; /* Balanced font weight */
+        border-bottom: 2px solid black; /* Fix space issue in border */
+        max-width: 90%; /* Limit width for a better reading experience */
+        margin: 0 auto; /* Center align the section while keeping text left-aligned */
+      }
+
+      /* Optional: Add a subtle drop shadow to make text more prominent */
+      .text-section p {
+        margin-bottom: 20px; /* Space between paragraphs */
+        text-indent: 50px;
+        text-align: justify;
+      }
+
+      /* Service Cards */
+      .service-card {
+        display: flex;
+        align-items: center;
+        background: #f8f9fa;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .service-text {
+        width: 30%;
+        padding: 30px;
+      }
+
+      .service-text h3 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .service-text p {
+        font-size: 16px;
+        color: #555;
+      }
+
+      .service-image {
+        width: 70%;
+      }
+
+      .service-image img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .certificate-section {
+        padding: 50px 0;
+        background: #f8f9fa;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .slider {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: nowrap;
+        width: max-content; /* Make the slider as wide as needed */
+        animation: scroll-left 15s linear infinite;
+      }
+
+      .slider.reverse {
+        animation: scroll-right 15s linear infinite;
+      }
+
+      .slider img {
+        max-width: 250px;
+        object-fit: cover;
+        height: 100px;
+        margin: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* Keyframes for Right to Left Scrolling */
+      @keyframes scroll-right {
+        0% {
+          transform: translateX(-50%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      /* Floating WhatsApp Button */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25d366;
+        color: white;
+        font-size: 24px;
+        width: 55px;
+        height: 55px;
+        text-align: center;
+        line-height: 55px;
+        border-radius: 50%;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        transition: 0.3s ease-in-out;
+        z-index: 1000;
+        animation: bounce 2s infinite, glow 1.5s infinite alternate;
+      }
+
+      /* Hover Effect */
+      .whatsapp-float:hover {
+        background-color: #1ebe5d;
+        transform: scale(1.1);
+      }
+
+      /* Bounce Animation */
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+
+      /* Glow Effect */
+      @keyframes glow {
+        0% {
+          box-shadow: 0 0 5px #25d366;
+        }
+        100% {
+          box-shadow: 0 0 20px #25d366;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Shillan International</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/product.html">Product</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="/service.html"
+                  >Service</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="hero-overlay"></div>
+      <h1 class="hero-title">Service</h1>
+    </div>
+
+    <!-- Text Section -->
+    <div class="text-section">
+      <p>
+        With a robust infrastructure and cutting-edge technology, Gujarat Group
+        of Companies stands as a leader in various sectors, including
+        Import/Export, Agri-Commodities, and Ginning. Gujarat Overseas, our
+        import-export arm, efficiently manages global trade operations,
+        connecting markets across the globe. Gujarat Trading sources and
+        supplies high-quality agri-commodities, catering to the needs of
+        domestic and international buyers. Ankan Industries, our ginning
+        division, processes raw cotton with a high level of precision and
+        quality control, meeting the needs of the textile industry. As a growth
+        engine, Gujarat Group of Companies contributes significantly to the
+        industry, driving innovation and excellence while maintaining the
+        highest standards of quality and customer satisfaction.
+      </p>
+    </div>
+
+    <!-- Service Cards Section -->
+    <div class="container py-5">
+      <div class="row">
+        <!-- Service 1 -->
+        <div class="col-12">
+          <div class="service-card">
+            <div class="service-text">
+              <h3>Import & Export</h3>
+              <p>
+                We facilitate smooth international trade with secure and
+                efficient logistics.
+              </p>
+            </div>
+            <div class="service-image">
+              <img src="assets/img/left side ship.webp" alt="Import Export" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="col-12">
+          <div class="service-card">
+            <div class="service-text">
+              <h3>Supply Chain Management</h3>
+              <p>
+                End-to-end supply chain solutions to streamline your business
+                operations.
+              </p>
+            </div>
+            <div class="service-image">
+              <img src="assets/img/supply chain.webp" alt="Supply Chain" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="col-12">
+          <div class="service-card">
+            <div class="service-text">
+              <h3>Warehousing Solutions</h3>
+              <p>
+                State-of-the-art warehouses to store and manage inventory
+                efficiently.
+              </p>
+            </div>
+            <div class="service-image">
+              <img src="assets/img/warehouse.webp" alt="Warehousing" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="certificate-section">
+      <div class="container">
+        <h2 class="text-center mb-4">Certifications</h2>
+
+        <!-- First Slider (Left to Right) -->
+        <div class="slider-container">
+          <div class="slider">
+            <img src="assets/img/c1.webp" alt="Certificate 1" />
+            <img src="assets/img/c2.webp" alt="Certificate 2" />
+            <img src="assets/img/c3.webp" alt="Certificate 3" />
+            <img src="assets/img/c4.webp" alt="Certificate 4" />
+            <img src="assets/img/c5.webp" alt="Certificate 5" />
+            <img src="assets/img/c1.webp" alt="Certificate 1" />
+            <img src="assets/img/c2.webp" alt="Certificate 2" />
+            <img src="assets/img/c3.webp" alt="Certificate 3" />
+            <img src="assets/img/c4.webp" alt="Certificate 4" />
+            <img src="assets/img/c5.webp" alt="Certificate 5" />
+          </div>
+        </div>
+
+        <!-- Second Slider (Right to Left) -->
+        <div class="slider-container mt-3">
+          <div class="slider reverse">
+            <img src="assets/img/c6.webp" alt="Certificate 6" />
+            <img src="assets/img/c1.webp" alt="Certificate 7" />
+            <img src="assets/img/c2.webp" alt="Certificate 8" />
+            <img src="assets/img/c3.webp" alt="Certificate 9" />
+            <img src="assets/img/c4.webp" alt="Certificate 10" />
+            <img src="assets/img/c6.webp" alt="Certificate 6" />
+            <img src="assets/img/c1.webp" alt="Certificate 7" />
+            <img src="assets/img/c2.webp" alt="Certificate 8" />
+            <img src="assets/img/c3.webp" alt="Certificate 9" />
+            <img src="assets/img/c4.webp" alt="Certificate 10" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/916353490183" target="_blank" class="whatsapp-float">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
