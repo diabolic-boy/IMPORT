@@ -63,7 +63,6 @@
       }
 
       @media (max-width: 480px) {
-       
         .hero-title {
           font-size: 10vw;
           bottom: 40%;
@@ -267,6 +266,61 @@
           box-shadow: 0 0 20px #25d366;
         }
       }
+
+      .category-card {
+        border: none;
+        background: #f8f9fa;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      /* Hover Effect */
+      .category-card:hover {
+        transform: translateY(-5px);
+      }
+
+      /* Image Styling */
+      .category-card img {
+        max-width: none !important;
+        width: 60%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      /* Text Styling */
+      .category-card .card-body {
+        flex: 1;
+        padding: 15px;
+      }
+
+      /* Adjust Text Alignment for Even Rows */
+      .category-card:nth-child(even) .card-body {
+        text-align: right;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .category-card {
+          flex-direction: column !important;
+          text-align: center;
+        }
+
+        .category-card img {
+          width: 100%;
+          max-width: 250px;
+          margin-bottom: 10px;
+        }
+
+        .category-card .card-body {
+          text-align: center !important;
+        }
+      }
+      .card-title,
+      .card-text {
+        text-align: center;
+      }
     </style>
   </head>
   <body>
@@ -339,26 +393,48 @@
 
     <!-- Service Cards Section -->
     <div class="container py-5">
-      <div class="row">
+      <div class="row g-4">
         <!-- Service 1 -->
         <div class="col-12">
-          <div class="service-card">
-            <div class="service-text">
-              <h3>Import & Export</h3>
-              <p>
+          <div
+            class="card category-card d-flex flex-row-reverse p-3 align-items-center"
+          >
+            <img
+              src="assets/img/left side ship.webp"
+              class="img-fluid"
+              alt="Import Export"
+              style="max-width: 200px"
+            />
+            <div class="card-body">
+              <h3 class="card-title fs-3 fw-bold">Import & Export</h3>
+              <p class="card-text fs-6">
                 We facilitate smooth international trade with secure and
                 efficient logistics.
               </p>
-            </div>
-            <div class="service-image">
-              <img src="assets/img/left side ship.webp" alt="Import Export" />
             </div>
           </div>
         </div>
 
         <!-- Service 2 -->
         <div class="col-12">
-          <div class="service-card">
+          <div
+            class="card category-card d-flex flex-row-reverse p-3 align-items-center"
+          >
+            <img
+              src="assets/img/supply chain.webp"
+              alt="Supply Chain"
+              class="img-fluid"
+              style="max-width: 200px"
+            />
+            <div class="card-body">
+              <h3 class="card-title fs-3 fw-bold">Supply Chain Management</h3>
+              <p class="card-text fs-6">
+                End-to-end supply chain solutions to streamline your business
+                operations.
+              </p>
+            </div>
+          </div>
+          <!-- <div class="service-card">
             <div class="service-text">
               <h3>Supply Chain Management</h3>
               <p>
@@ -369,12 +445,29 @@
             <div class="service-image">
               <img src="assets/img/supply chain.webp" alt="Supply Chain" />
             </div>
-          </div>
+          </div> -->
         </div>
 
         <!-- Service 3 -->
         <div class="col-12">
-          <div class="service-card">
+          <div
+            class="card category-card d-flex flex-row-reverse p-3 align-items-center"
+          >
+            <img
+              src="assets/img/warehouse.webp"
+              alt="Warehousing"
+              class="img-fluid"
+              style="max-width: 200px"
+            />
+            <div class="card-body">
+              <h3 class="card-title fs-3 fw-bold">Warehousing Solutions</h3>
+              <p class="card-text fs-6">
+                State-of-the-art warehouses to store and manage inventory
+                efficiently.
+              </p>
+            </div>
+          </div>
+          <!-- <div class="service-card">
             <div class="service-text">
               <h3>Warehousing Solutions</h3>
               <p>
@@ -385,7 +478,7 @@
             <div class="service-image">
               <img src="assets/img/warehouse.webp" alt="Warehousing" />
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
