@@ -219,7 +219,9 @@ p {
   text-align: center;
   background: white;
 }
-
+.services .card {
+  height: 450px;
+}
 /* footer */
 footer {
   text-align: center;
@@ -814,7 +816,7 @@ img.rounded-circle:hover {
 @media (max-width: 768px) {
   .hero-title {
     font-size: 6vw;
-    bottom: 10%;
+    /* bottom: 10%; */
   }
   .category-card {
     flex-direction: column !important;
@@ -835,7 +837,7 @@ img.rounded-circle:hover {
 @media (max-width: 480px) {
   .hero-title {
     font-size: 10vw;
-    bottom: 40%;
+    /* bottom: 40%; */
   }
   .hero-section {
     height: 20vh;
@@ -1020,79 +1022,6 @@ textarea.form-control {
 }
 
 /* RESPONSIVE HERO SECTION */
-/* @media (max-width: 1024px) {
-  .hero-title {
-    font-size: 4.5vw;
-    bottom: 12%;
-  }
-} */
-
-/* @media (max-width: 768px) {
-  .hero-title {
-    font-size: 6vw;
-    bottom: 10%;
-  }
-
-  .contact-container {
-    flex-wrap: wrap;
-    flex-direction: column;
-    
-  }
-
-  .contact-left,
-  .contact-right {
-    width: 100%;
-    height: 50vh;
-    
-  }
-  
-} */
-
-/* @media (max-width: 480px) {
-  .contact-left,
-.contact-right{
-  border: none;
-}
-  .hero-title {
-    font-size: 10vw;
-    bottom: 40%;
-  }
-
-  .hero-section2 {
-    height: 100vh;
-  }
-
-  .contact-container {
-    flex-direction: column;
-    
-  }
-
-  .contact-left {
-    display: none !important;
-    
-  }
-
-  .contact-right {
-    width: 100% !important;
-    height: auto !important;
-    padding: 20px !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  form {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .social-icons {
-    display: flex !important;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px; 
-  }
-} */
 
 @media screen and (max-width: 768px) {
   .section {
@@ -1121,14 +1050,14 @@ textarea.form-control {
 
   .hero-title {
     font-size: 7vw;
-    bottom: 45%;
+    /* bottom: 45%; */
   }
 }
 
 @media screen and (max-width: 480px) {
   .hero-title {
     font-size: 8vw;
-    bottom: 50%;
+    /* bottom: 50%; */
   }
 
   .contact-left{
