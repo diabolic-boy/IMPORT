@@ -90,9 +90,83 @@ p {
 .hero .carousel-indicators {
   color: white;
 }
+.bi-globe-americas::before {
+    content: "\f882";
+    color: #dc3545;
+}
+/* why choose card hover effect */
+.card.hover-effect {
+  position: relative;
+  background-color: #f2f8f9;
+  overflow: hidden;
+  z-index: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Bigger and better-positioned expanding circle */
+.card.hover-effect::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  background: #198754;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: -1;
+  transition: transform 0.4s ease-out;
+}
+
+.card.hover-effect:hover::before {
+  transform: translate(-50%, -50%) scale(25); /* Covers full card */
+}
+
+/* Text color changes */
+.card.hover-effect:hover h5,
+.card.hover-effect:hover p {
+  color: white;
+  transition: color 0.3s ease-out;
+}
+
+
+
 .card-text {
   color: black;
 }
+
+
+/* Service card hover effect */
+.card {
+  position: relative;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 0;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  z-index: 0;
+  border: 1px solid #f2f8f9;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+}
+
+.card:hover .card-title,
+.card:hover .card-text {
+  transition: color 0.3s ease-out;
+  
+}
+
+.card:hover .btn-success {
+ 
+  border-color: #25d366;
+}
+
 /* Floating WhatsApp Button */
 .whatsapp-float {
   position: fixed;
@@ -158,7 +232,8 @@ footer {
 footer h5 {
   color: #fff;
   font-weight: 600;
-  border-bottom: 2px solid #ffcc00;
+  /* border-bottom: 2px solid #ffcc00; */
+  border-bottom: 2px solid #218838;
   display: inline-block;
   padding-bottom: 5px;
   margin-bottom: 15px;
@@ -168,10 +243,27 @@ footer ul li {
   margin-bottom: 10px;
 }
 
+footer ul li:hover {
+  color: #218838; /* or any color you prefer */
+  cursor: pointer;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+
 footer i {
   font-size: 18px;
   vertical-align: middle;
 }
+
+footer i:hover {
+  color: #218838; /* or any highlight color */
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(33, 136, 56, 0.3);
+}
+
 
 footer p {
   color: #fff;
@@ -358,7 +450,7 @@ footer p {
 .mission-box:hover,
 .vision-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 5px 10px rgba(33, 136, 56, 0.3) !important;
 }
 
 .icon {
@@ -374,8 +466,32 @@ footer p {
 }
 .icon-box i {
   font-size: 2rem;
-  color: #007bff;
+  color: #218838;
+  transition: transform 0.5s ease;
 }
+.icon-box i:hover {
+  transform: rotate(360deg); 
+}
+
+.fa-solid {
+  color: #218838;
+}
+.fa-phone:before {
+  color: white;
+}
+img.rounded-circle {
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+img.rounded-circle:hover {
+  transform: rotateY(180deg);
+}
+
+
+
+
+
 
 @media (max-width: 480px) {
   .Mission-Vision {
@@ -466,6 +582,7 @@ footer p {
 /* Hover Effect */
 .category-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0px 5px 10px rgba(33, 136, 56, 0.3);
 }
 
 /* Image Styling */
@@ -490,7 +607,7 @@ footer p {
 
 /* Button Styling */
 .btn-view-more {
-  background: #007bff;
+  background: #218838 !important;
   color: #fff;
   padding: 8px 16px;
   border-radius: 5px;
@@ -499,7 +616,9 @@ footer p {
 }
 
 .btn-view-more:hover {
-  background: #0056b3;
+  background: #0b8d27 !important;
+  box-shadow: 0px 5px 10px rgba(33, 136, 56, 0.3) !important;
+  color: white !important;
 }
 
 /* RESPONSIVE HERO SECTION */
@@ -718,9 +837,9 @@ footer p {
     font-size: 10vw;
     bottom: 40%;
   }
-  /* .hero-section {
-    height: 30vh;
-  } */
+  .hero-section {
+    height: 20vh;
+  }
 
   .text-section {
     padding: 15px; /* Reduce padding for small screens */
@@ -786,19 +905,20 @@ footer p {
 
 .section {
   background-color: #f8f9fa;
-  min-height: 100vh;
-
   display: flex;
   align-items: center;
+  margin-top: 30px;
+  padding: 0 70px 0 70px;
 }
 
 .contact-left,
 .contact-right {
-  height: 90vh;
+  /* height: 90vh; */
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
+  border-radius: 10px 0 0 10px ;
+  
 }
 
 /* Left Side (Image Background & Overlay) */
@@ -845,7 +965,7 @@ form {
   background: #fff;
   padding: 30px;
   height: 500px;
-  border-radius: 10px;
+  border-radius: 0 10px 10px 0;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -867,21 +987,26 @@ h3 {
   transition: all 0.3s ease-in-out;
 }
 
+/* Input & textarea focus effect */
+
+.form-control:focus {
+  border-color: #218838 !important; /* Green border */
+  box-shadow: 0 0 5px rgba(33, 136, 56, 0.5) !important; /* Green glow effect */
+  outline: none; /* Remove default focus outline */
+}
+
+
+
 /* Textarea */
 textarea.form-control {
   height: 100px;
   resize: none;
 }
 
-/* Input Focus Effect */
-.form-control:focus {
-  border-color: #28a745;
-  box-shadow: 0px 0px 8px rgba(40, 167, 69, 0.5);
-}
+
 
 /* Button Styling */
 .btn-success {
-  height: 45px;
   font-size: 18px;
   font-weight: bold;
   transition: 0.3s;
@@ -895,14 +1020,14 @@ textarea.form-control {
 }
 
 /* RESPONSIVE HERO SECTION */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .hero-title {
     font-size: 4.5vw;
     bottom: 12%;
   }
-}
+} */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .hero-title {
     font-size: 6vw;
     bottom: 10%;
@@ -911,19 +1036,19 @@ textarea.form-control {
   .contact-container {
     flex-wrap: wrap;
     flex-direction: column;
-    /* Stack on mobile */
+    
   }
 
   .contact-left,
   .contact-right {
     width: 100%;
     height: 50vh;
-    /* Prevent collapse */
+    
   }
   
-}
+} */
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .contact-left,
 .contact-right{
   border: none;
@@ -934,22 +1059,21 @@ textarea.form-control {
   }
 
   .hero-section2 {
-    height: 30vh;
+    height: 100vh;
   }
 
   .contact-container {
     flex-direction: column;
-    /* Stack elements in a column */
+    
   }
 
   .contact-left {
     display: none !important;
-    /* Ensure left side is completely hidden */
+    
   }
 
   .contact-right {
     width: 100% !important;
-    /* Full width */
     height: auto !important;
     padding: 20px !important;
     display: flex;
@@ -960,15 +1084,71 @@ textarea.form-control {
   form {
     width: 100% !important;
     max-width: 100% !important;
-    /* Form takes full width */
   }
 
   .social-icons {
     display: flex !important;
     justify-content: center;
     gap: 10px;
-    margin-top: 20px; /* Space after form */
+    margin-top: 20px; 
+  }
+} */
+
+@media screen and (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .contact-left,
+  .contact-right {
+    height: auto;
+    width: 100%;
+    border: none;
+    margin-bottom: 20px;
+  }
+
+  .contact-left .details {
+    width: 90%;
+    padding: 20px;
+  }
+
+  form {
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .hero-title {
+    font-size: 7vw;
+    bottom: 45%;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 8vw;
+    bottom: 50%;
+  }
+
+  .contact-left{
+    display: none;
+  }
+
+  .form-control {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  textarea.form-control {
+    height: 80px;
+  }
+
+  .btn-success {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+}
+
 
 

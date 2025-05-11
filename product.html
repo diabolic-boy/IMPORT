@@ -13,8 +13,11 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
-     <!-- Bootstrap Icons CDN -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Bootstrap Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
     <style>
       .hero-section {
         background: url("assets/img/product banner.webp") no-repeat center
@@ -181,10 +184,11 @@
     </div>
     <div class="container py-5">
       <div class="row g-4">
+        <!-- Fruits Category -->
         <div class="col-12">
           <div
             class="card category-card d-flex flex-row p-3 align-items-center"
-            style="border: 1px solid black"
+            style="border: 1px solid #afc9bd"
           >
             <img
               src="assets/img/fruits.webp"
@@ -193,24 +197,26 @@
               style="max-width: 200px"
             />
             <div class="card-body">
-              <h5 class="card-title">Fruits</h5>
-              <p class="card-text">Fresh & Organic Fruits.</p>
+              <h5 class="card-title">Fresh Fruits</h5>
+              <p class="card-text">
+                Naturally ripened and globally sourced for premium taste
+              </p>
               <button
                 class="btn btn-view-more"
                 data-bs-toggle="modal"
                 data-bs-target="#productModal"
                 onclick="toggleProducts('fruits')"
               >
-                View More
+                Explore All Fruits
               </button>
             </div>
           </div>
         </div>
-
+        <!-- Vegetables Category -->
         <div class="col-12">
           <div
             class="card category-card d-flex flex-row-reverse p-3 align-items-center"
-            style="border: 1px solid black"
+            style="border: 1px solid #afc9bd"
           >
             <img
               src="assets/img/dry fruits.webp"
@@ -219,24 +225,26 @@
               style="max-width: 200px"
             />
             <div class="card-body text-end">
-              <h5 class="card-title">Dry Fruits</h5>
-              <p class="card-text">Premium Quality Dry Fruits.</p>
+              <h5 class="card-title">Farm-Fresh Vegetables</h5>
+              <p class="card-text">
+                Handpicked quality produce for global markets
+              </p>
               <button
                 class="btn btn-view-more"
                 data-bs-toggle="modal"
                 data-bs-target="#productModal"
-                onclick="toggleProducts('dryfruits')"
+                onclick="toggleProducts('vegitables')"
               >
-                View More
+                Browse Fresh Vegetables
               </button>
             </div>
           </div>
         </div>
-
+        <!-- Ceramic Sanitary Ware Category -->
         <div class="col-12">
           <div
             class="card category-card d-flex flex-row p-3 align-items-center"
-            style="border: 1px solid black"
+            style="border: 1px solid #afc9bd"
           >
             <img
               src="assets/img/masala.webp"
@@ -245,24 +253,27 @@
               style="max-width: 200px"
             />
             <div class="card-body">
-              <h5 class="card-title">Spices</h5>
-              <p class="card-text">Authentic Indian Spices.</p>
+              <h5 class="card-title">Ceramic Sanitary Ware</h5>
+              <p class="card-text">
+                Elegant, durable, and crafted for modern lifestyles
+              </p>
               <button
                 class="btn btn-view-more"
                 data-bs-toggle="modal"
                 data-bs-target="#productModal"
-                onclick="toggleProducts('spices')"
+                onclick="toggleProducts('ceramic')"
               >
-                View More
+                View All Sanitary Products
               </button>
             </div>
           </div>
         </div>
 
+        <!-- Grains Category -->
         <div class="col-12">
           <div
             class="card category-card d-flex flex-row-reverse p-3 align-items-center"
-            style="border: 1px solid black"
+            style="border: 1px solid #afc9bd"
           >
             <img
               src="assets/img/grains.webp"
@@ -271,15 +282,43 @@
               style="max-width: 200px"
             />
             <div class="card-body text-end">
-              <h5 class="card-title">Grains</h5>
-              <p class="card-text">High-Quality Grains.</p>
+              <h5 class="card-title">Premium Grains</h5>
+              <p class="card-text">Wholesome nutrition, sourced with care</p>
               <button
                 class="btn btn-view-more"
                 data-bs-toggle="modal"
                 data-bs-target="#productModal"
                 onclick="toggleProducts('grains')"
               >
-                View More
+                See Our Grain Varieties
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Spices Category -->
+        <div class="col-12">
+          <div
+            class="card category-card d-flex flex-row p-3 align-items-center"
+            style="border: 1px solid #afc9bd"
+          >
+            <img
+              src="assets/img/masala.webp"
+              class="img-fluid"
+              alt="Spices"
+              style="max-width: 200px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Authentic Indian Spices</h5>
+              <p class="card-text">
+                Rich in aroma, flavor, and global culinary value
+              </p>
+              <button
+                class="btn btn-view-more"
+                data-bs-toggle="modal"
+                data-bs-target="#productModal"
+                onclick="toggleProducts('spices')"
+              >
+                Discover All Spices
               </button>
             </div>
           </div>
@@ -319,73 +358,193 @@
           {
             name: "Mango",
             img: "assets/img/mango.webp",
-            details: "Sweet and juicy tropical fruit.",
+            details: "Packed with vitamins A and C for immune and skin health",
           },
           {
             name: "Banana",
             img: "assets/img/banana.webp",
-            details: "Rich in potassium and energy.",
-          },
-          {
-            name: "Apple",
-            img: "assets/img/apple.webp",
-            details: "Rich in fiber and vitamins.",
+            details: "Rich in potassium, perfect for energy and heart health",
           },
           {
             name: "Grapes",
             img: "assets/img/grapes.webp",
-            details: "Rich in fiber and vitamins.",
+            details: " Loaded with antioxidants for overall wellness",
+          },
+          {
+            name: "Watermelon",
+            img: "assets/img/Watermelon.png",
+            details: "Hydrating and rich in vitamins for skin health",
+          },
+          {
+            name: "Pomegranate",
+            img: "assets/img/pomegranate.png",
+            details: "High in antioxidants, great for heart health",
+          },
+          {
+            name: "Fruit Papaya",
+            img: "assets/img/Fruit Papaya.png",
+            details: "A natural source of antioxidants and digestive enzymes",
+          },
+          {
+            name: "Pineapple",
+            img: "assets/img/Pineapple.png",
+            details: "Packed with vitamin C for immune support",
+          },
+          {
+            name: "Coconut",
+            img: "assets/img/Coconut.png",
+            details: "Rich in healthy fats and great for hydration",
           },
         ],
-        dryfruits: [
+        vegitables: [
           {
-            name: "Almonds",
+            name: "Onion",
             img: "assets/img/almonds.webp",
-            details: "Great source of protein.",
+            details:
+              "A flavorful vegetable packed with antioxidants and health benefits",
           },
           {
-            name: "Cashews",
+            name: "Green Chilly",
             img: "assets/img/cashews.webp",
-            details: "Rich in healthy fats.",
+            details: "Adds spice and boosts metabolism with vitamin C",
           },
           {
-            name: "pistachios",
+            name: "Drumstic(Moringa)",
             img: "assets/img/pistachios.webp",
-            details: "Rich in healthy fats.",
+            details:
+              "Packed with vitamins and minerals, known for its health benefits",
+          },
+          {
+            name: "Okra",
+            img: "assets/img/pistachios.webp",
+            details: "Rich in fiber and antioxidants, good for heart health",
+          },
+          {
+            name: "Lime",
+            img: "assets/img/pistachios.webp",
+            details: "Full of vitamin C, perfect for boosting immunity",
+          },
+          {
+            name: "Elephant Yam",
+            img: "assets/img/pistachios.webp",
+            details: "A nutrient-packed root vegetable, great for digestion",
+          },
+          {
+            name: "Cucumber",
+            img: "assets/img/pistachios.webp",
+            details:
+              "Refreshing and hydrating, rich in vitamins for skin health",
           },
         ],
+
+        ceramic: [
+          {
+            name: "Wash Basin",
+            img: "assets/img/",
+            details: "Stylish and functional, perfect for any bathroom setup",
+          },
+          {
+            name: "Pedestal",
+            img: "assets/img/cumin.webp",
+            details: "Classic design, ideal for stable and elegant wash basins",
+          },
+          {
+            name: "Bath Tub",
+            img: "assets/img/cumin.webp",
+            details:
+              "Spacious and relaxing, perfect for a luxurious bath experience",
+          },
+          {
+            name: "Wastern Closet(Toilet)",
+            img: "assets/img/cumin.webp",
+            details:
+              "High-quality, durable toilets designed for comfort and easy use",
+          },
+          {
+            name: "Bidets",
+            img: "assets/img/cumin.webp",
+            details:
+              "Modern and eco-friendly, providing a clean and refreshing experience",
+          },
+          {
+            name: "Mens/Woman Urinal",
+            img: "assets/img/cumin.webp",
+            details:
+              "Efficient and hygienic, designed for comfort and convenience",
+          },
+        ],
+
         spices: [
           {
-            name: "Turmeric",
+            name: "Cloves",
             img: "assets/img/turmeric.webp",
-            details: "Anti-inflammatory properties.",
+            details:
+              "Naturally antiseptic and supports oral and digestive health",
           },
           {
             name: "Cumin",
             img: "assets/img/cumin.webp",
-            details: "Used in spice blends worldwide.",
+            details: "Aids digestion and enhances flavor in every dish",
+          },
+          {
+            name: "Bay Leaf(Tej Patta)",
+            img: "assets/img/cumin.webp",
+            details: "Aromatic spice that supports digestion and heart health",
+          },
+          {
+            name: "Chilli Powder",
+            img: "assets/img/cumin.webp",
+            details: "Adds heat and boosts metabolism naturally",
+          },
+          {
+            name: "Turmeric Powder",
+            img: "assets/img/cumin.webp",
+            details:
+              "Powerful anti-inflammatory with immunity-boosting properties",
+          },
+          {
+            name: "Black Paper",
+            img: "assets/img/cumin.webp",
+            details: "Enhances flavor and aids nutrient absorption",
+          },
+          {
+            name: "Carom Seeds(Ajwain)",
+            img: "assets/img/cumin.webp",
+            details: "Known for improving digestion and relieving bloating",
+          },
+          {
+            name: "Cinnamon",
+            img: "assets/img/cumin.webp",
+            details:
+              "Rich in antioxidants, supports heart and blood sugar health",
+          },
+          {
+            name: "Ginger",
+            img: "assets/img/cumin.webp",
+            details: "Boosts immunity and aids digestion naturally",
           },
         ],
         grains: [
           {
             name: "Rice",
             img: "assets/img/rice.webp",
-            details: "Staple food for many cultures.",
+            details: "Easily digestible and energy-rich, ideal for daily meals",
           },
           {
             name: "Wheat",
             img: "assets/img/wheat.webp",
-            details: "Used to make bread and pasta.",
+            details: "A staple grain packed with fiber and essential nutrients",
           },
           {
-            name: "Bajra",
+            name: "Bajra(Pearl Millet)",
             img: "assets/img/bajra.webp",
-            details: "Used to make bread and pasta.",
+            details: "High in iron and protein, supports heart and bone health",
           },
           {
-            name: "Lentils",
+            name: "Maize(Corn)",
             img: "assets/img/lentils.webp",
-            details: "Used to make bread and pasta.",
+            details:
+              "Rich in fiber and energy, great for digestion and strength",
           },
         ],
       };
@@ -412,52 +571,107 @@
     <a href="https://wa.me/916353490183" target="_blank" class="whatsapp-float">
       <i class="fab fa-whatsapp"></i>
     </a>
-     <!-- Footer -->
-     <footer class="bg-dark text-light pt-5 pb-3 mt-5">
+    <!-- Footer -->
+    <footer class="bg-dark text-light pt-5 pb-3 mt-5">
       <div class="container">
         <div class="row">
-    
           <!-- Quick Links -->
           <div class="col-md-4 mb-4">
             <h5 class="text-uppercase mb-3">Quick Links</h5>
             <ul class="list-unstyled">
-              <li><a href="#" class="text-light text-decoration-none">Home</a></li>
-              <li><a href="#" class="text-light text-decoration-none">About Us</a></li>
-              <li><a href="#" class="text-light text-decoration-none">Products</a></li>
-              <li><a href="#" class="text-light text-decoration-none">Services</a></li>
-              <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+              <li>
+                <a href="/index.html" class="text-light text-decoration-none"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="/about.html" class="text-light text-decoration-none"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Products</a>
+              </li>
+              <li>
+                <a href="/Service.html" class="text-light text-decoration-none"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="/contact.html" class="text-light text-decoration-none"
+                  >Contact</a
+                >
+              </li>
             </ul>
           </div>
-    
+
           <!-- Contact Details -->
           <div class="col-md-4 mb-4">
             <h5 class="text-uppercase mb-3">Contact Us</h5>
             <ul class="list-unstyled">
-              <li><i class="bi bi-geo-alt-fill me-2"></i>Ahmedabad, Gujarat, India</li>
-              <li><i class="bi bi-envelope-fill me-2"></i>info@shillaninternational.com</li>
-              <li><i class="bi bi-telephone-fill me-2"></i>+91 98765 43210</li>
+              <li>
+                <i class="bi bi-geo-alt-fill me-2"></i>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Chokdi,Surendranagar,Gujarat,India"
+                  target="_blank"
+                  style="color: white; text-decoration: none"
+                >
+                  Chokdi, Surendranagar, Gujarat, India
+                </a>
+              </li>
+
+              <li>
+                <i class="bi bi-envelope-fill me-2"></i>
+                <a
+                  href="mailto:shillanint@gmail.com"
+                  style="color: white; text-decoration: none"
+                  >shillanint@gmail.com</a
+                >
+              </li>
+
+              <li>
+                <i class="bi bi-telephone-fill me-2"></i>
+                <a
+                  href="tel:+919662023208"
+                  style="color: white; text-decoration: none"
+                  >+91 9662023208</a
+                >
+                /
+                <a
+                  href="tel:+916359862893"
+                  style="color: white; text-decoration: none"
+                  >+91 6359862893</a
+                >
+              </li>
             </ul>
           </div>
-    
+
           <!-- Social Media -->
           <div class="col-md-4 mb-4">
             <h5 class="text-uppercase mb-3">Follow Us</h5>
             <div>
-              <a href="#" class="text-light me-3 links"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="text-light me-3"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" class="text-light me-3 links"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="text-light me-3"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" class="text-light me-3"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
               <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
             </div>
             <p class="mt-3">Stay connected with us for updates and news.</p>
           </div>
-    
         </div>
-    
+
         <hr class="border-secondary" />
-    
+
         <!-- Copyright -->
         <div class="text-center">
-          <p class="mb-0">&copy; 2025 Shillan International. All Rights Reserved.</p>
+          <p class="mb-0">
+            &copy; 2025 Shillan International. All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>
