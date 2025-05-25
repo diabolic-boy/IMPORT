@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #f4f4f4;
+  background-color: #f8f9fa;
   color: #333;
 }
 
@@ -167,6 +167,12 @@ p {
   border-color: #25d366;
 }
 
+.card-img-top {
+    max-width: none !important;
+    height: 250px;
+    object-fit: cover;
+}
+
 /* Floating WhatsApp Button */
 .whatsapp-float {
   position: fixed;
@@ -220,7 +226,7 @@ p {
   background: white;
 }
 .services .card {
-  height: 450px;
+  height: 480px;
 }
 /* footer */
 footer {
@@ -345,14 +351,15 @@ footer p {
 
   .hero h5 {
     font-size: 14px;
-    margin-top: 24px;
+    margin-top: 20px;
   }
 
   .hero p {
     font-size: 10px;
   }
 
-  .carousel-control-next-icon {
+  .carousel-dark .carousel-control-next-icon, 
+  .carousel-dark .carousel-control-prev-icon {
     display: none;
   }
 
@@ -365,6 +372,9 @@ footer p {
   .text-muted {
     text-align: center;
   }
+  .services .card {
+  height: 450px;
+}
   
 }
 
@@ -400,7 +410,6 @@ footer p {
 }
 
 /* About Page css  */
-
 /* Hero Section Styling */
 .hero-section1 {
   display: flex;
@@ -415,25 +424,78 @@ footer p {
   max-width: 50%;
 }
 
-.hero-video {
-  max-width: 50%;
-  text-align: right;
+.frame {
+  background-color: #ddc;
+  border: solid 5vmin #eee;
+  border-bottom-color: #fff;
+  border-left-color: #eee;
+  border-top-color: #ddd;
+  border-right-color: #eee;
+  border-radius: 2px;
+  box-shadow:
+    0 0 5px 0 rgba(0, 0, 0, 0.25) inset,
+    0 5px 10px 5px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 8vmin;
+  position: relative;
+  text-align: center;
+  margin: auto;
+  max-width: 100%;
 }
 
-.hero-video video {
-  width: 100%;
-  object-fit: cover;
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  height: 400px;
+.frame::before {
+  border-radius: 2px;
+  bottom: -2vmin;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25) inset;
+  content: "";
+  left: -2vmin;
+  position: absolute;
+  right: -2vmin;
+  top: -2vmin;
 }
+
+.frame::after {
+  border-radius: 2px;
+  bottom: -2.5vmin;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  content: "";
+  left: -2.5vmin;
+  position: absolute;
+  right: -2.5vmin;
+  top: -2.5vmin;
+}
+
+/* Optional: enhance the image border itself */
+.frame img {
+  border: solid 2px;
+  border-bottom-color: #ffe;
+  border-left-color: #eed;
+  border-right-color: #eed;
+  border-top-color: #ccb;
+  max-width: 100%;
+  height: 200px;
+}
+
+.frame h5,
+.frame p {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  color: #333;
+}
+
+.frame p {
+  font-size: 0.95rem;
+}
+
+
 
 /* Responsive */
 @media (max-width: 768px) {
   .hero-section1 {
     flex-direction: column;
     text-align: center;
+    
   }
   .hero-text,
   .hero-video {
@@ -496,6 +558,7 @@ img.rounded-circle:hover {
 
 
 @media (max-width: 480px) {
+  
   .Mission-Vision {
     padding: 30px 15px;
     margin-top: 30px;
@@ -544,6 +607,9 @@ img.rounded-circle:hover {
 
   .col-md-6 {
     width: 100%;
+  }
+  .fw-semibold {
+    text-align: center;
   }
 }
 

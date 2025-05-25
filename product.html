@@ -129,7 +129,7 @@
         margin: 0 auto;
       }
       #productModal {
-        margin-top: 50px !important;
+        /* margin-top: 50px !important; */
       }
       .modal-body {
         max-height: 800px; /* Adjust height as needed */
@@ -201,7 +201,7 @@
             style="border: 1px solid #afc9bd"
           >
             <img
-              src="assets/img/fruits.webp"
+              src="assets/img/Fruit/Fruits.png"
               class="img-fluid"
               alt="Fruits"
               style="max-width: 200px"
@@ -229,7 +229,7 @@
             style="border: 1px solid #afc9bd"
           >
             <img
-              src="assets/img/dry fruits.webp"
+              src="assets/img/Vegetables/Vegitables.png"
               class="img-fluid"
               alt="Dry Fruits"
               style="max-width: 200px"
@@ -250,14 +250,99 @@
             </div>
           </div>
         </div>
-        <!-- Ceramic Sanitary Ware Category -->
+ <!-- Dry-Fruits Category -->
         <div class="col-12">
           <div
             class="card category-card d-flex flex-row p-3 align-items-center"
             style="border: 1px solid #afc9bd"
           >
             <img
-              src="assets/img/masala.webp"
+              src="assets/img/Dry-Fruit/Dry-Fruits.png"
+              class="img-fluid"
+              alt="Fruits"
+              style="max-width: 200px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Dry-Fruits</h5>
+              <p class="card-text">
+                Naturally ripened and globally sourced for premium taste
+              </p>
+              <button
+                class="btn btn-view-more"
+                data-bs-toggle="modal"
+                data-bs-target="#productModal"
+                onclick="toggleProducts('dryfruits')"
+              >
+                Explore All Fruits
+              </button>
+            </div>
+          </div>
+        </div>
+
+         <!-- Grains Category -->
+        <div class="col-12">
+          <div
+            class="card category-card d-flex flex-row-reverse p-3 align-items-center"
+            style="border: 1px solid #afc9bd"
+          >
+            <img
+              src="assets/img/Grains/Grains.png"
+              class="img-fluid"
+              alt="Grains"
+              style="max-width: 200px"
+            />
+            <div class="card-body text-end">
+              <h5 class="card-title">Premium Grains</h5>
+              <p class="card-text">Wholesome nutrition, sourced with care</p>
+              <button
+                class="btn btn-view-more"
+                data-bs-toggle="modal"
+                data-bs-target="#productModal"
+                onclick="toggleProducts('grains')"
+              >
+                See Our Grain Varieties
+              </button>
+            </div>
+          </div>
+        </div>
+
+         <!-- Spices Category -->
+        <div class="col-12">
+          <div
+            class="card category-card d-flex flex-row p-3 align-items-center"
+            style="border: 1px solid #afc9bd"
+          >
+            <img
+              src="assets/img/Spices/Spices.png"
+              class="img-fluid"
+              alt="Spices"
+              style="max-width: 200px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Authentic Indian Spices</h5>
+              <p class="card-text">
+                Rich in aroma, flavor, and global culinary value
+              </p>
+              <button
+                class="btn btn-view-more"
+                data-bs-toggle="modal"
+                data-bs-target="#productModal"
+                onclick="toggleProducts('spices')"
+              >
+                Discover All Spices
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ceramic Sanitary Ware Category -->
+        <div class="col-12">
+          <div
+            class="card category-card d-flex flex-row-reverse p-3 align-items-center"
+            style="border: 1px solid #afc9bd"
+          >
+            <img
+              src="assets/img/Ceramic/ceramic1.png"
               class="img-fluid"
               alt="Spices"
               style="max-width: 200px"
@@ -279,60 +364,8 @@
           </div>
         </div>
 
-        <!-- Grains Category -->
-        <div class="col-12">
-          <div
-            class="card category-card d-flex flex-row-reverse p-3 align-items-center"
-            style="border: 1px solid #afc9bd"
-          >
-            <img
-              src="assets/img/grains.webp"
-              class="img-fluid"
-              alt="Grains"
-              style="max-width: 200px"
-            />
-            <div class="card-body text-end">
-              <h5 class="card-title">Premium Grains</h5>
-              <p class="card-text">Wholesome nutrition, sourced with care</p>
-              <button
-                class="btn btn-view-more"
-                data-bs-toggle="modal"
-                data-bs-target="#productModal"
-                onclick="toggleProducts('grains')"
-              >
-                See Our Grain Varieties
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- Spices Category -->
-        <div class="col-12">
-          <div
-            class="card category-card d-flex flex-row p-3 align-items-center"
-            style="border: 1px solid #afc9bd"
-          >
-            <img
-              src="assets/img/masala.webp"
-              class="img-fluid"
-              alt="Spices"
-              style="max-width: 200px"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Authentic Indian Spices</h5>
-              <p class="card-text">
-                Rich in aroma, flavor, and global culinary value
-              </p>
-              <button
-                class="btn btn-view-more"
-                data-bs-toggle="modal"
-                data-bs-target="#productModal"
-                onclick="toggleProducts('spices')"
-              >
-                Discover All Spices
-              </button>
-            </div>
-          </div>
-        </div>
+       
+       
       </div>
     </div>
 
@@ -367,118 +400,144 @@
         fruits: [
           {
             name: "Mango",
-            img: "assets/img/mango.webp",
+            img: "assets/img/Fruit/mango.webp",
             details: "Packed with vitamins A and C for immune and skin health",
           },
           {
             name: "Banana",
-            img: "assets/img/banana.webp",
+            img: "assets/img/Fruit/banana.webp",
             details: "Rich in potassium, perfect for energy and heart health",
           },
           {
             name: "Grapes",
-            img: "assets/img/grapes.webp",
+            img: "assets/img/Fruit/grapes.webp",
             details: " Loaded with antioxidants for overall wellness",
           },
           {
             name: "Watermelon",
-            img: "assets/img/Watermelon.png",
+            img: "assets/img/Fruit/Watermelon.png",
             details: "Hydrating and rich in vitamins for skin health",
           },
           {
             name: "Pomegranate",
-            img: "assets/img/pomegranate.png",
+            img: "assets/img/Fruit/pomegranate.png",
             details: "High in antioxidants, great for heart health",
           },
           {
             name: "Fruit Papaya",
-            img: "assets/img/Fruit Papaya.png",
+            img: "assets/img/Fruit/Fruit Papaya.png",
             details: "A natural source of antioxidants and digestive enzymes",
           },
           {
             name: "Pineapple",
-            img: "assets/img/Pineapple.png",
+            img: "assets/img/Fruit/Pineapple.png",
             details: "Packed with vitamin C for immune support",
           },
           {
             name: "Coconut",
-            img: "assets/img/Coconut.png",
+            img: "assets/img/Fruit/Coconut.png",
             details: "Rich in healthy fats and great for hydration",
           },
         ],
         vegitables: [
           {
             name: "Onion",
-            img: "assets/img/almonds.webp",
+            img: "assets/img/Vegetables/Onion.png",
             details:
               "A flavorful vegetable packed with antioxidants and health benefits",
           },
           {
             name: "Green Chilly",
-            img: "assets/img/cashews.webp",
+            img: "assets/img/Vegetables/Green Chilly.png",
             details: "Adds spice and boosts metabolism with vitamin C",
           },
           {
             name: "Drumstic(Moringa)",
-            img: "assets/img/pistachios.webp",
+            img: "assets/img/Vegetables/Drumstic(Moringa).png",
             details:
               "Packed with vitamins and minerals, known for its health benefits",
           },
           {
             name: "Okra",
-            img: "assets/img/pistachios.webp",
+            img: "assets/img/Vegetables/Okra.png",
             details: "Rich in fiber and antioxidants, good for heart health",
           },
           {
             name: "Lime",
-            img: "assets/img/pistachios.webp",
+            img: "assets/img/Vegetables/Lime.png",
             details: "Full of vitamin C, perfect for boosting immunity",
           },
           {
             name: "Elephant Yam",
-            img: "assets/img/pistachios.webp",
+            img: "assets/img/Vegetables/Elephant Yam.png",
             details: "A nutrient-packed root vegetable, great for digestion",
           },
           {
             name: "Cucumber",
-            img: "assets/img/pistachios.webp",
+            img: "assets/img/Vegetables/Cucumber.png",
             details:
               "Refreshing and hydrating, rich in vitamins for skin health",
           },
         ],
 
+         dryfruits: [
+          {
+            name: "Almonds",
+            img: "assets/img/Dry-Fruit/Almonds.webp",
+            details: "Nutrient-dense and heart-healthy, rich in protein, fiber, and antioxidants that support brain function and overall wellness",
+          },
+          {
+            name: "Cashews",
+            img: "assets/img/Dry-Fruit/Cashews.webp",
+            details: "Creamy and energy-rich, loaded with healthy fats, minerals, and antioxidants that boost immunity and support heart health",
+          },
+          {
+            name: "Pista",
+            img: "assets/img/Dry-Fruit/Pista.webp",
+            details:
+              "Nutrient-rich nuts packed with healthy fats, protein, and antioxidants for heart health and energy",
+          },
+          {
+            name: "Raisins",
+            img: "assets/img/Dry-Fruit/Raisins.webp",
+            details:
+              "Sweet and chewy dried grapes, rich in natural sugars and antioxidants that boost energy and digestion",
+          },
+          
+        ],
+
         ceramic: [
           {
             name: "Wash Basin",
-            img: "assets/img/",
+            img: "assets/img/Ceramic/Square Washbasin.png",
             details: "Stylish and functional, perfect for any bathroom setup",
           },
           {
-            name: "Pedestal",
-            img: "assets/img/cumin.webp",
+            name: "Pedestal Washbasin",
+            img: "assets/img/Ceramic/Pedestal Washbasin.png",
             details: "Classic design, ideal for stable and elegant wash basins",
           },
           {
             name: "Bath Tub",
-            img: "assets/img/cumin.webp",
+            img: "assets/img/Ceramic/Bath Tub.png",
             details:
               "Spacious and relaxing, perfect for a luxurious bath experience",
           },
           {
             name: "Wastern Closet(Toilet)",
-            img: "assets/img/cumin.webp",
+            img: "assets/img/Ceramic/Wastern Closet(Toilet).png",
             details:
               "High-quality, durable toilets designed for comfort and easy use",
           },
           {
             name: "Bidets",
-            img: "assets/img/cumin.webp",
+            img: "assets/img/Ceramic/Ceramic Bidet.png",
             details:
               "Modern and eco-friendly, providing a clean and refreshing experience",
           },
           {
-            name: "Mens/Woman Urinal",
-            img: "assets/img/cumin.webp",
+            name: "Mens Urinal",
+            img: "assets/img/Ceramic/Men's Urinal.png",
             details:
               "Efficient and hygienic, designed for comfort and convenience",
           },
@@ -487,72 +546,72 @@
         spices: [
           {
             name: "Cloves",
-            img: "assets/img/turmeric.webp",
+            img: "assets/img/Spices/Cloves.png",
             details:
               "Naturally antiseptic and supports oral and digestive health",
           },
           {
             name: "Cumin",
-            img: "assets/img/cumin.webp",
+            img: "assets/img/Spices/Cumin.png",
             details: "Aids digestion and enhances flavor in every dish",
           },
           {
             name: "Bay Leaf(Tej Patta)",
-            img: "assets/img/cumin.webp",
+            img: "assets/img/Spices/Bay Leaf(Tej Patta).png",
             details: "Aromatic spice that supports digestion and heart health",
           },
           {
             name: "Chilli Powder",
-            img: "assets/img/cumin.webp",
+            img: "assets/img/Spices/Chilli Powder.png",
             details: "Adds heat and boosts metabolism naturally",
           },
           {
             name: "Turmeric Powder",
-            img: "assets/img/cumin.webp",
+            img: "assets/img/Spices/Turmeric Powder.png",
             details:
               "Powerful anti-inflammatory with immunity-boosting properties",
           },
           {
             name: "Black Paper",
-            img: "assets/img/cumin.webp",
+            img: "assets/img/Spices/Black Paper.png",
             details: "Enhances flavor and aids nutrient absorption",
           },
           {
             name: "Carom Seeds(Ajwain)",
-            img: "assets/img/cumin.webp",
+            img: "assets/img/Spices/Carom Seeds(Ajwain).png",
             details: "Known for improving digestion and relieving bloating",
           },
           {
             name: "Cinnamon",
-            img: "assets/img/cumin.webp",
+            img: "assets/img/Spices/Cinnamon.png",
             details:
               "Rich in antioxidants, supports heart and blood sugar health",
           },
           {
             name: "Ginger",
-            img: "assets/img/cumin.webp",
+            img: "assets/img/Spices/Ginger.png",
             details: "Boosts immunity and aids digestion naturally",
           },
         ],
         grains: [
           {
             name: "Rice",
-            img: "assets/img/rice.webp",
+            img: "assets/img/Grains/rice.webp",
             details: "Easily digestible and energy-rich, ideal for daily meals",
           },
           {
             name: "Wheat",
-            img: "assets/img/wheat.webp",
+            img: "assets/img/Grains/wheat.webp",
             details: "A staple grain packed with fiber and essential nutrients",
           },
           {
             name: "Bajra(Pearl Millet)",
-            img: "assets/img/bajra.webp",
+            img: "assets/img/Grains/bajra.webp",
             details: "High in iron and protein, supports heart and bone health",
           },
           {
             name: "Maize(Corn)",
-            img: "assets/img/lentils.webp",
+            img: "assets/img/Grains/lentils.webp",
             details:
               "Rich in fiber and energy, great for digestion and strength",
           },
