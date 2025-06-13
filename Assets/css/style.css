@@ -1,4 +1,28 @@
 
+.skeleton {
+  background-color: #e2e2e2;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  100% {
+    left: 100%;
+  }
+}
+
 /* Global Styles */
 * {
   margin: 0;
@@ -292,32 +316,7 @@ footer p {
   z-index: 9999;
 }
 
-/* The custom loader design */
-/* .loader {
-  width: 80px;
-  aspect-ratio: 1;
-  border: 10px solid #000;
-  box-sizing: border-box;
-  background: 
-    radial-gradient(farthest-side,#fff 98%,#0000) top,
-    radial-gradient(farthest-side,#fff 98%,#0000) top,
-    radial-gradient(farthest-side,#fff 98%,#0000) left,
-    radial-gradient(farthest-side,#fff 98%,#0000) right,
-    radial-gradient(farthest-side,#fff 98%,#0000) bottom,
-    #000;
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  filter: blur(4px) contrast(10); 
-  animation: l19 2s infinite;
-}
 
-@keyframes l19 {
-  0%   {background-position: top, top, left, right, bottom}
-  25%  {background-position: right, top, left, right, bottom}
-  50%  {background-position: bottom, top, left, right, bottom}
-  75%  {background-position: left, top, left, right, bottom}
-  100% {background-position: top, top, left, right, bottom}
-} */
 
 /* Add to your CSS */
 #page-loader.fade-out {
@@ -375,7 +374,7 @@ footer p {
 /* Smaller screens (phones) */
 @media (max-width: 480px) {
   .hero {
-    height: 50vh;
+    height: 40vh;
     position: relative; /* Required for absolute positioning inside */
   }
 
@@ -400,7 +399,7 @@ footer p {
 
   .hero h5 {
     font-size: 14px;
-    margin-top: 20px;
+    margin-top: 13px;
   }
 
   .hero p {

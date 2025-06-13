@@ -204,7 +204,7 @@
   </div>
     <div class="hero-section">
       <div class="hero-overlay"></div>
-      <h1 class="hero-title">Product</h1>
+      <!-- <h1 class="hero-title">Product</h1> -->
     </div>
     <div class="container py-5">
       <div class="row g-4">
@@ -218,6 +218,7 @@
               src="assets/img/Fruit/Fruits.png"
               class="img-fluid"
               alt="Fruits"
+              loading="lazy"
               style="max-width: 200px"
             />
             <div class="card-body">
@@ -246,6 +247,7 @@
               src="assets/img/Vegetables/Vegitables.png"
               class="img-fluid"
               alt="Dry Fruits"
+              loading="lazy"
               style="max-width: 200px"
             />
             <div class="card-body text-end">
@@ -274,6 +276,7 @@
               src="assets/img/Dry-Fruit/Dry-Fruits.png"
               class="img-fluid"
               alt="Fruits"
+              loading="lazy"
               style="max-width: 200px"
             />
             <div class="card-body">
@@ -303,6 +306,7 @@
               src="assets/img/Grains/Grains.png"
               class="img-fluid"
               alt="Grains"
+              loading="lazy"
               style="max-width: 200px"
             />
             <div class="card-body text-end">
@@ -330,6 +334,7 @@
               src="assets/img/Spices/Spices.png"
               class="img-fluid"
               alt="Spices"
+              loading="lazy"
               style="max-width: 200px"
             />
             <div class="card-body">
@@ -359,6 +364,7 @@
               src="assets/img/Ceramic/ceramic1.png"
               class="img-fluid"
               alt="Spices"
+              loading="lazy"
               style="max-width: 200px"
             />
             <div class="card-body">
@@ -651,7 +657,7 @@
       }
     </script>
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/916353490183" target="_blank" class="whatsapp-float">
+    <a href="https://wa.me/919662023208" target="_blank" class="whatsapp-float">
       <i class="fab fa-whatsapp"></i>
     </a>
     <!-- Footer -->
@@ -699,7 +705,7 @@
                   target="_blank"
                   style="color: white; text-decoration: none"
                 >
-                  Chokdi, Surendranagar, Gujarat, India
+                  Surendranagar, Gujarat, India
                 </a>
               </li>
 
@@ -733,16 +739,16 @@
           <div class="col-md-4 mb-4">
             <h5 class="text-uppercase mb-3">Follow Us</h5>
             <div>
-              <a href="#" class="text-light me-3 links"
+              <a href="https://www.facebook.com/share/14JzsZqw4NE/?mibextid=qi2Omg" class="text-light me-3 links"
                 ><i class="bi bi-facebook"></i
               ></a>
-              <a href="#" class="text-light me-3"
+              <a href="https://www.instagram.com/shillan_international810?igsh=d3U1bmpiNGhsdDd2" class="text-light me-3"
                 ><i class="bi bi-instagram"></i
               ></a>
-              <a href="#" class="text-light me-3"
+              <a href="https://in.linkedin.com/in/shillan-international-172ab0330" class="text-light me-3"
                 ><i class="bi bi-twitter-x"></i
               ></a>
-              <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
+              <a href="https://in.linkedin.com/in/shillan-international-172ab0330" class="text-light"><i class="bi bi-linkedin"></i></a>
             </div>
             <p class="mt-3">Stay connected with us for updates and news.</p>
           </div>
@@ -759,17 +765,22 @@
       </div>
     </footer>
      <script>
-    window.addEventListener('load', function() {
-      const loader = document.getElementById('page-loader');
-      if(loader) {
-        loader.classList.add('fade-out');
-        setTimeout(() => {
-          loader.style.display = 'none';
-        }, 500);
-      } else {
-        console.error('Loader element not found!');
-      }
-    });
-  </script>
+  function hideLoader() {
+    const loader = document.getElementById('page-loader');
+    if (loader && !loader.classList.contains('fade-out')) {
+      loader.classList.add('fade-out');
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 500);
+    }
+  }
+
+  // Hide loader when page is fully loaded
+  window.addEventListener('load', hideLoader);
+
+  // Maximum timeout: Hide loader after 30 seconds even if page hasn't loaded
+  setTimeout(hideLoader, 30000); // 30000 ms = 30 sec
+</script>
+
   </body>
 </html>
