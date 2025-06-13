@@ -3,70 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Shillan International - Exporter of fresh fruits, vegetables, spices, and ceramic ware globally with premium quality."
-    />
-    <meta
-      name="keywords"
-      content="Export, Fruits, Vegetables, Spices, Ceramic, Wholesale, India"
-    />
-    <meta property="og:title" content="Shillan International" />
-    <meta
-      property="og:description"
-      content="Global Exporter of Quality Agricultural and Ceramic Products"
-    />
-    <meta property="og:image" content="assets/img/company-logo.png" />
 
     <title>Shillan International</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <script defer src="Assets/js/script.js"></script>
 
-    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
-    <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       defer
     ></script>
 
-    <!-- Bootstrap Icons CDN -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
     />
 
-    <!-- FontAwesome icon CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
 
-    <!--Lotiee animation-->
-    <script
-      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-      type="module"
-    ></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
   </head>
-  <body>
-    <!-- Page Loader -->
-    <div id="page-loader">
-      <dotlottie-player
-        src="https://lottie.host/28e1ef1c-4fb9-459a-aec9-c3ca37ad377a/yFbBZlqBDY.lottie"
-        background="transparent"
-        speed="1"
-        style="width: 200px; height: 200px"
-        loop
-        autoplay
-      >
-      </dotlottie-player>
+  <body class="is-loading">
+    <div id="page-loader" style="display: flex; justify-content: center; align-items: center; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; z-index: 9999;">
+        <dotlottie-player
+          src="https://lottie.host/28e1ef1c-4fb9-459a-aec9-c3ca37ad377a/yFbBZlqBDY.lottie"
+          background="transparent"
+          speed="1"
+          style="width: 200px; height: 200px"
+          loop
+          autoplay>
+        </dotlottie-player>
     </div>
 
-    <!-- Navbar -->
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -119,112 +94,155 @@
       </nav>
     </header>
 
-    <!-- Hero Section -->
-    <!-- Hero Section with Bootstrap Carousel -->
-<section class="hero" id="home">
-  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-    <!-- Carousel Indicators -->
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
-    </div>
+    <section class="hero" id="home">
+      <div
+        id="carouselExampleDark"
+        class="carousel carousel-dark slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+        </div>
 
-    <!-- Carousel Inner -->
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="5000">
-        <div class="skeleton">
-          <img
-            src="Assets/img/ships.png"
-            class="img-fluid"
-            alt="First Slide"
-            loading="lazy"
-            onload="this.parentElement.classList.remove('skeleton')"
-          />
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <img
+              src="Assets/img/ships.png"
+              class="img-fluid"
+              alt="First Slide"
+              loading="lazy"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Global Export Excellence</h5>
+              <p>
+                Committed to quality, reliability, and long-term business
+                relationships
+              </p>
+              <button
+                type="button"
+                class="btn btn-success"
+                onclick="window.location.href='about.html'"
+              >
+                See Why Global Clients Trust Us
+              </button>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img
+              src="Assets/img/product Banner.webp"
+              class="d-block w-100"
+              alt="Second Slide"
+              loading="lazy"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Fresh Fruits & Vegetables</h5>
+              <p>
+                Delivering farm-fresh fruits and vegetables with premium quality
+                assurance
+              </p>
+              <button
+                type="button"
+                class="btn btn-success"
+                onclick="window.location.href='product.html'"
+              >
+                Experience Freshness, Delivered Globally
+              </button>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img
+              src="Assets/img/banner-1.webp"
+              class="d-block w-100"
+              alt="Third Slide"
+              loading="lazy"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Spices, Grains & More</h5>
+              <p>
+                Exporting the richness of Indian agriculture with global
+                compliance
+              </p>
+              <button
+                type="button"
+                class="btn btn-success"
+                onclick="window.location.href='product.html'"
+              >
+                Browse Our Diverse Agro Products
+              </button>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img
+              src="Assets/img/Sanitary Ware.png"
+              class="d-block w-100"
+              alt="Third Slide"
+              loading="lazy"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Ceramic Sanitary Ware</h5>
+              <p>
+                Exporting premium ceramic sanitary ware, crafted for durability and timeless design
+              </p>
+              <button
+                type="button"
+                class="btn btn-success"
+                onclick="window.location.href='product.html'"
+              >
+                Browse Our Diverse Ceramic Products
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Global Export Excellence</h5>
-          <p>Committed to quality, reliability, and long-term business relationships</p>
-          <button type="button" class="btn btn-success" onclick="window.location.href='about.html'">
-            See Why Global Clients Trust Us
-          </button>
-        </div>
-      </div>
-      <div class="carousel-item" data-bs-interval="5000">
-        <div class="skeleton">
-          <img
-            src="Assets/img/product Banner.webp"
-            class="d-block w-100"
-            alt="Second Slide"
-            loading="lazy"
-            onload="this.parentElement.classList.remove('skeleton')"
-          />
-        </div>
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Fresh Fruits & Vegetables</h5>
-          <p>Delivering farm-fresh fruits and vegetables with premium quality assurance</p>
-          <button type="button" class="btn btn-success" onclick="window.location.href='product.html'">
-            Experience Freshness, Delivered Globally
-          </button>
-        </div>
-      </div>
-      <div class="carousel-item" data-bs-interval="5000">
-        <div class="skeleton">
-          <img
-            src="Assets/img/banner-1.webp"
-            class="d-block w-100"
-            alt="Third Slide"
-            loading="lazy"
-            onload="this.parentElement.classList.remove('skeleton')"
-          />
-        </div>
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Spices, Grains & More</h5>
-          <p>Exporting the richness of Indian agriculture with global compliance</p>
-          <button type="button" class="btn btn-success" onclick="window.location.href='product.html'">
-            Browse Our Diverse Agro Products
-          </button>
-        </div>
-      </div>
-      <div class="carousel-item" data-bs-interval="5000">
-        <div class="skeleton">
-          <img
-            src="Assets/img/Sanitary Ware.png"
-            class="d-block w-100"
-            alt="Third Slide"
-            loading="lazy"
-            onload="this.parentElement.classList.remove('skeleton')"
-          />
-        </div>
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Ceramic Sanitary Ware</h5>
-          <p>Exporting premium ceramic sanitary ware, crafted for durability and timeless design</p>
-          <button type="button" class="btn btn-success" onclick="window.location.href='product.html'">
-            Browse Our Diverse Ceramic Products
-          </button>
-        </div>
-      </div>
-    </div>
 
-    <!-- Carousel Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-</section>
-
-    <!-- section-3 -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
     <section class="why-choose-us py-5 bg-light">
       <div class="container">
         <h2 class="text-center mb-4">Why Choose Shillan International?</h2>
         <div class="row g-4">
-          <!-- Premium Quality -->
           <div class="col-md-4">
             <div class="card border-0 shadow h-100 hover-effect">
               <div class="card-body text-center">
@@ -238,7 +256,6 @@
             </div>
           </div>
 
-          <!-- Global Export -->
           <div class="col-md-4">
             <div class="card border-0 shadow h-100 hover-effect">
               <div class="card-body text-center">
@@ -252,7 +269,6 @@
             </div>
           </div>
 
-          <!-- Fresh & Organic -->
           <div class="col-md-4">
             <div class="card border-0 shadow h-100 hover-effect">
               <div class="card-body text-center">
@@ -266,7 +282,6 @@
             </div>
           </div>
 
-          <!-- Competitive Pricing -->
           <div class="col-md-4">
             <div class="card border-0 shadow h-100 hover-effect">
               <div class="card-body text-center">
@@ -279,7 +294,6 @@
             </div>
           </div>
 
-          <!-- Secure Packaging -->
           <div class="col-md-4">
             <div class="card border-0 shadow h-100 hover-effect">
               <div class="card-body text-center">
@@ -293,7 +307,6 @@
             </div>
           </div>
 
-          <!-- 24/7 Customer Support -->
           <div class="col-md-4">
             <div class="card border-0 shadow h-100 hover-effect">
               <div class="card-body text-center">
@@ -310,7 +323,6 @@
       </div>
     </section>
 
-    <!-- Services Section -->
     <section class="services" id="services">
       <div class="container">
         <h2 class="text-center mb-4">Our Areas of Expertise</h2>
@@ -425,16 +437,13 @@
         </div>
       </div>
     </section>
-    <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/919662023208" target="_blank" class="whatsapp-float">
       <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Footer -->
     <footer class="bg-dark text-light pt-5 pb-3 mt-5">
       <div class="container">
         <div class="row">
-          <!-- Quick Links -->
           <div class="col-md-4 mb-4">
             <h5 class="text-uppercase mb-3">Quick Links</h5>
             <ul class="list-unstyled">
@@ -464,7 +473,6 @@
             </ul>
           </div>
 
-          <!-- Contact Details -->
           <div class="col-md-4 mb-4">
             <h5 class="text-uppercase mb-3">Contact Us</h5>
             <ul class="list-unstyled">
@@ -505,30 +513,19 @@
             </ul>
           </div>
 
-          <!-- Social Media -->
           <div class="col-md-4 mb-4">
             <h5 class="text-uppercase mb-3">Follow Us</h5>
             <div>
-              <a
-                href="https://www.facebook.com/share/14JzsZqw4NE/?mibextid=qi2Omg"
-                class="text-light me-3 links"
+              <a href="https://www.facebook.com/share/14JzsZqw4NE/?mibextid=qi2Omg" class="text-light me-3 links"
                 ><i class="bi bi-facebook"></i
               ></a>
-              <a
-                href="https://www.instagram.com/shillan_international810?igsh=d3U1bmpiNGhsdDd2"
-                class="text-light me-3"
+              <a href="https://www.instagram.com/shillan_international810?igsh=d3U1bmpiNGhsdDd2" class="text-light me-3"
                 ><i class="bi bi-instagram"></i
               ></a>
-              <a
-                href="https://x.com/shillanint?t=F6Y-EcM_jzzL2F6b5ZMH6w&s=09"
-                class="text-light me-3"
+              <a href="https://x.com/shillanint?t=F6Y-EcM_jzzL2F6b5ZMH6w&s=09" class="text-light me-3"
                 ><i class="bi bi-twitter-x"></i
               ></a>
-              <a
-                href="https://in.linkedin.com/in/shillan-international-172ab0330"
-                class="text-light"
-                ><i class="bi bi-linkedin"></i
-              ></a>
+              <a href="https://in.linkedin.com/in/shillan-international-172ab0330" class="text-light"><i class="bi bi-linkedin"></i></a>
             </div>
             <p class="mt-3">Stay connected with us for updates and news.</p>
           </div>
@@ -536,30 +533,42 @@
 
         <hr class="border-secondary" />
 
-        <!-- Copyright -->
         <div class="text-center">
           <p class="mb-0">
-            &copy; 2025 Shillan International. All Rights Reserved.
+            © 2025 Shillan International. All Rights Reserved.
           </p>
         </div>
       </div>
     </footer>
     <script>
-      function hideLoader() {
-        const loader = document.getElementById("page-loader");
-        if (loader && !loader.classList.contains("fade-out")) {
-          loader.classList.add("fade-out");
-          setTimeout(() => {
-            loader.style.display = "none";
-          }, 500);
+        // Lottie Loader script (optional, you can remove it if skeleton is enough)
+        function hideLottieLoader() {
+            const lottieLoader = document.getElementById('page-loader');
+            if (lottieLoader) {
+                lottieLoader.style.display = 'none';
+            }
         }
-      }
 
-      // Hide loader when page is fully loaded
-      window.addEventListener("load", hideLoader);
+        // Hide skeleton screen and show actual content
+        function showContent() {
+            const body = document.body;
+            body.classList.remove('is-loading');
+            hideLottieLoader(); // Hide Lottie loader as well
+        }
 
-      // Maximum timeout: Hide loader after 30 seconds even if page hasn't loaded
-      setTimeout(hideLoader, 30000); // 30000 ms = 30 sec
+        // On window load (all assets including images are loaded)
+        window.addEventListener('load', showContent);
+
+        // Fallback timeout in case 'load' event doesn't fire as expected
+        // (e.g., if some external scripts fail to load, or very slow network)
+        // Adjust this value as needed, 3-5 seconds is usually good.
+        setTimeout(showContent, 5000); // 5000 ms = 5 seconds
+
+        // If you want the Lottie animation to appear *before* the skeleton,
+        // you would modify this logic. For a true skeleton, it's typically immediate.
+        // If you want the Lottie loader to *always* hide first,
+        // regardless of skeleton, keep your original hideLoader() and add a delay
+        // before removing 'is-loading' from body.
     </script>
   </body>
 </html>

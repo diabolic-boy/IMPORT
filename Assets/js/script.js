@@ -36,17 +36,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // loader code 
 
-window.addEventListener("load", function () {
-  const loader = document.getElementById("page-loader");
-  if(loader) {
-    loader.classList.add("fade-out");
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 500);
-  } else {
-    console.error("Loader element not found!");
-  }
-});
+// window.addEventListener("load", function () {
+//   const loader = document.getElementById("page-loader");
+//   if(loader) {
+//     loader.classList.add("fade-out");
+//     setTimeout(() => {
+//       loader.style.display = "none";
+//     }, 500);
+//   } else {
+//     console.error("Loader element not found!");
+//   }
+// });
+
+
+
+
+
 
 
 

@@ -1,27 +1,233 @@
 
-.skeleton {
-  background-color: #e2e2e2;
-  position: relative;
-  overflow: hidden;
+/* --- Skeleton Screen Base Styles --- */
+.is-loading .skeleton-placeholder {
+    background-color: #e0e0e0; /* Light gray color */
+    border-radius: 4px;
+    animation: pulse 1.5s infinite ease-in-out;
 }
 
-.skeleton::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: -100%;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-  animation: loading 1.5s infinite;
+/* Animation for skeleton effect */
+@keyframes pulse {
+    0% {
+        background-color: #e0e0e0;
+    }
+    50% {
+        background-color: #f0f0f0;
+    }
+    100% {
+        background-color: #e0e0e0;
+    }
 }
 
-@keyframes loading {
-  100% {
-    left: 100%;
-  }
+/* --- Specific Skeleton Placeholder Styles based on your existing layout --- */
+
+/* For Navbar Logo */
+.is-loading .navbar-brand img {
+    visibility: hidden; /* Hide the actual logo */
 }
+.is-loading .navbar-brand::after {
+    content: ''; /* Create a pseudo-element for the skeleton */
+    display: inline-block;
+    width: 120px; /* Adjust to logo width */
+    height: 30px; /* Adjust to logo height */
+    vertical-align: middle;
+    border-radius: 4px;
+    background-color: #e0e0e0;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* For Navbar Links */
+.is-loading .navbar-nav .nav-link {
+    visibility: hidden; /* Hide the actual link text */
+}
+.is-loading .navbar-nav .nav-link::after {
+    content: '';
+    display: block;
+    width: 60px; /* Adjust to link text width */
+    height: 20px; /* Adjust to link text height */
+    border-radius: 4px;
+    background-color: #e0e0e0;
+    animation: pulse 1.5s infinite ease-in-out;
+    margin-top: 4px; /* Adjust spacing */
+}
+
+/* For Hero Section (Carousel Images, Titles, Text, Buttons) */
+.is-loading .carousel-item img {
+    visibility: hidden; /* Hide actual carousel images */
+    background-color: #e0e0e0; /* Placeholder background */
+}
+.is-loading .carousel-item {
+    min-height: 400px; /* Ensure skeleton has height */
+    display: flex; /* Make sure it takes up space for the pseudo-element */
+    align-items: center;
+    justify-content: center;
+    position: relative; /* For pseudo-element positioning */
+    overflow: hidden; /* Hide image overflow for placeholder */
+}
+.is-loading .carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0;
+    animation: pulse 1.5s infinite ease-in-out;
+    z-index: 0; /* Below content */
+}
+
+
+/* Specific styles for carousel caption skeleton */
+.is-loading .carousel-caption h5 {
+    visibility: hidden;
+    height: 30px; /* Placeholder height */
+    width: 70%; /* Placeholder width */
+    background-color: #e0e0e0;
+    animation: pulse 1.5s infinite ease-in-out;
+    margin: 0 auto 10px auto; /* Center and add spacing */
+    border-radius: 4px;
+}
+.is-loading .carousel-caption p {
+    visibility: hidden;
+    height: 20px;
+    width: 90%;
+    background-color: #e0e0e0;
+    animation: pulse 1.5s infinite ease-in-out;
+    margin: 0 auto 15px auto;
+    border-radius: 4px;
+}
+.is-loading .carousel-caption .btn {
+    visibility: hidden;
+    height: 40px;
+    width: 200px;
+    background-color: #e0e0e0;
+    animation: pulse 1.5s infinite ease-in-out;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+/* Ensure real captions are visible when not loading */
+.carousel-caption h5,
+.carousel-caption p,
+.carousel-caption .btn {
+    visibility: visible;
+}
+
+
+/* For Section Headings (H2) */
+.is-loading h2.text-center {
+    visibility: hidden;
+    height: 40px; /* Placeholder height */
+    width: 60%; /* Placeholder width */
+    margin: 0 auto 20px auto !important; /* Center and provide space */
+    background-color: #e0e0e0;
+    animation: pulse 1.5s infinite ease-in-out;
+    border-radius: 4px;
+}
+
+/* For Card Icons */
+.is-loading .card-body .bi,
+.is-loading .card-body .fab { /* For FontAwesome icons too */
+    visibility: hidden;
+    display: block; /* To make width/height work */
+    width: 60px; /* Icon size */
+    height: 60px;
+    border-radius: 50%; /* Make it round */
+    margin: 0 auto 10px auto;
+    background-color: #e0e0e0;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* For Card Titles */
+.is-loading .card-body .card-title {
+    visibility: hidden;
+    height: 25px;
+    width: 80%;
+    margin: 0 auto 10px auto;
+    background-color: #e0e0e0;
+    animation: pulse 1.5s infinite ease-in-out;
+    border-radius: 4px;
+}
+
+/* For Card Text */
+.is-loading .card-body .card-text {
+    visibility: hidden;
+    height: 15px;
+    width: 95%;
+    margin: 5px auto;
+    background-color: #e0e0e0;
+    animation: pulse 1.5s infinite ease-in-out;
+    border-radius: 4px;
+}
+.is-loading .card-body .card-text:nth-of-type(2) { /* For second line of text */
+    width: 90%;
+}
+
+
+/* For Service Card Images */
+.is-loading .services .card img {
+    visibility: hidden;
+    height: 180px; /* Match your image height */
+    background-color: #e0e0e0;
+    animation: pulse 1.5s infinite ease-in-out;
+    border-radius: 4px 4px 0 0; /* Match card border-radius */
+}
+
+/* For Service Card Buttons */
+.is-loading .services .card .btn {
+    visibility: hidden;
+    height: 38px;
+    width: 100px;
+    margin-top: 15px;
+    background-color: #e0e0e0;
+    animation: pulse 1.5s infinite ease-in-out;
+    border-radius: 4px;
+}
+
+/* For Footer Links/Text */
+.is-loading footer .list-unstyled li a,
+.is-loading footer p {
+    visibility: hidden;
+    height: 20px; /* Approx line height */
+    background-color: #e0e0e0;
+    animation: pulse 1.5s infinite ease-in-out;
+    border-radius: 4px;
+    margin-bottom: 8px; /* Spacing between lines */
+}
+.is-loading footer .list-unstyled li a {
+    width: 80%; /* Adjust width for links */
+}
+.is-loading footer p {
+    width: 90%; /* Adjust width for paragraphs */
+}
+.is-loading footer h5 {
+    visibility: hidden;
+    height: 30px;
+    width: 60%;
+    margin-bottom: 15px;
+    background-color: #e0e0e0;
+    animation: pulse 1.5s infinite ease-in-out;
+    border-radius: 4px;
+}
+.is-loading footer .social-media-icons a {
+    visibility: hidden;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    animation: pulse 1.5s infinite ease-in-out;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Hide actual content when .is-loading is active */
+.is-loading *:not(.skeleton-placeholder) {
+    /* This rule selectively hides actual content,
+       but it's often more effective to hide specific elements as above.
+       Using visibility: hidden on specific elements is better because it preserves layout.
+    */
+}
+
+
 
 /* Global Styles */
 * {
