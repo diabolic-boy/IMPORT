@@ -101,6 +101,7 @@ p {
 .card.hover-effect {
   position: relative;
   background-color: #f2f8f9;
+  BORDER-RADIUS: 10PX ! IMPORTANT;
   overflow: hidden;
   z-index: 0;
   transition: all 0.3s ease-in-out;
@@ -535,6 +536,7 @@ footer p {
   background: white;
   text-align: center;
   transition: transform 0.3s ease-in-out;
+  BORDER-RADIUS: 10PX !important;
 }
 
 .mission-box:hover,
